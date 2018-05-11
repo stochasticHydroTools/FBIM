@@ -1,0 +1,27 @@
+PROJECT=exportndiskMsing_alpert
+
+
+FC=gfortran -c
+FFLAGS=-O2 -ffixed-line-length-0
+FLINK=gfortran -o $(PROJECT)
+MANAS=../Manas/
+lib=../libMatCode/
+
+.PHONY: $(PROJECT) clean
+
+FSRCS= $(lib)ndiskMsing_alpert.f90  $(lib)assembleMsing_alpert.f $(lib)specfun.f\
+       $(MANAS)test16.f $(MANAS)prini.f
+OBJS= ndiskMsing_alpert.o assembleMsing_alpert.o specfun.o test16.o prini.o
+
+GEOM_INPUT = ndisk_input_ref
+XI = 18.2091255526217566
+ORDER = 8
+
+$(PROJECT): 
+	$(FC) $(FFLAGS) $(FSRCS)
+	rm -f $(PROJECT)
+	$(FLINK) $(OBJS)
+	./$(PROJECT) $(GEOM_INPUT) $(XI) $(ORDER)
+
+clean:
+	rm -f $(OBJS) $(PROJECT)
