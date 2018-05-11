@@ -14,7 +14,7 @@ SingleBodyTest: demo codes for BD simulation of a single body (disk, ellipse, st
 
 ## Instructions
 1. Open MATLAB and compile mex codes:
-..* `cd libFBEM` and `mex -v fastgridding2d_mex.c`
-..* `cd libMatCode` and `mex -v expint_eone.C -I/usr/local/include/ -lgsl`
+.. * `cd libFBEM` and `mex -v fastgridding2d_mex.c`
+.. * `cd libMatCode` and `mex -v expint_eone.C -I/usr/local/include/ -lgsl`
 
 2. 
