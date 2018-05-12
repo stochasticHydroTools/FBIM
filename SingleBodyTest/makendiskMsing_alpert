@@ -4,13 +4,13 @@ PROJECT=exportndiskMsing_alpert
 FC=gfortran -c
 FFLAGS=-O2 -ffixed-line-length-0
 FLINK=gfortran -o $(PROJECT)
-MANAS=../Manas/
+SQ=../SingQuad/
 lib=../libMatCode/
 
 .PHONY: $(PROJECT) clean
 
 FSRCS= $(lib)ndiskMsing_alpert.f90  $(lib)assembleMsing_alpert.f $(lib)specfun.f\
-       $(MANAS)test16.f $(MANAS)prini.f
+       $(SQ)test16.f $(SQ)prini.f
 OBJS= ndiskMsing_alpert.o assembleMsing_alpert.o specfun.o test16.o prini.o
 
 GEOM_INPUT = ndisk_input_ref
