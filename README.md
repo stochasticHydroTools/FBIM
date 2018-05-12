@@ -21,6 +21,6 @@ This repository contains demo codes for simulating the overdamped Brownian Dynam
 
 3. In command line, run `make -f makendiskMsing_alpert` to export the Alpert matrix.
 
-4. Run `BD_EM_onedisk_precompute.m` again to get preconditioners. Repeat 2-4 if you change the parameters.
+4. Run `BD_EM_onedisk_precompute.m` again to finish precomputation. Repeat 2-4 if you change the parameters.
 
 5. Run `BD_EM_onedisk.m`.
